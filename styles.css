@@ -18,9 +18,9 @@ body {
 
 .score {
   position: absolute;
-  font-size: 40px;
-  right: 10vmin;
-  top: 1vmin;
+  font-size: 26px;
+  right: 7vmin;
+  top: 0;
   color: #3d3d3d;
 }
 

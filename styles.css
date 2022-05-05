@@ -18,8 +18,8 @@ body {
 
 .score {
   position: absolute;
-  font-size: 30px;
-  right: 1vmin;
+  font-size: 40px;
+  right: 10vmin;
   top: 1vmin;
   color: #3d3d3d;
 }

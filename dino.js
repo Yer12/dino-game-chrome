@@ -73,7 +73,7 @@ function onJump(e) {
 }
 
 function hanleJump(e) {
-  console.log(e)
+  console.log("event", e)
   if (isJumping) return
 
   yVelocity = JUMP_SPEED

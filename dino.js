@@ -23,6 +23,7 @@ export function setupDino() {
   document.removeEventListener("keydown", onJump)
   document.addEventListener("keydown", onJump)
   document.addEventListener("click", handleonJump)
+  document.removeEventListener("click", handleonJump)
 }
 
 export function updateDino(delta, speedScale) {

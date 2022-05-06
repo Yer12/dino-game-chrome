@@ -10,6 +10,11 @@ body {
   align-items: center;
   min-height: 100vh;
 }
+@media screen and (max-width: 980px){
+  body {
+    align-items: flex-start;
+  }
+}
 
 .world {
   overflow: hidden;

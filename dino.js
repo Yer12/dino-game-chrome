@@ -37,7 +37,7 @@ export function getDinoRect() {
 
 export function setDinoLose() {
   console.log("dino is lose")
-  dinoElem.src = "imgs/dinorun.gif"
+  dinoElem.src = "imgs/dinosaur_left.png"
 }
 
 function handleRun(delta, speedScale) {

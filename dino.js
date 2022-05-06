@@ -37,7 +37,7 @@ export function getDinoRect() {
 
 export function setDinoLose() {
   console.log("dino is lose")
-  dinoElem.src = "imgs/dinosaur_left.png"
+  dinoElem.src = `imgs/dino.png`
 }
 
 function handleRun(delta, speedScale) {
@@ -49,7 +49,7 @@ function handleRun(delta, speedScale) {
   }
 
   console.log("dino is staying")
-  dinoElem.src = `imgs/dino.png`
+  dinoElem.src = "imgs/dinosaur_left.png"
 
   currentFrameTime += delta * speedScale
 }

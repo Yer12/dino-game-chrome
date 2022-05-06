@@ -36,20 +36,20 @@ export function getDinoRect() {
 }
 
 export function setDinoLose() {
-  console.log("dino is lose")
   dinoElem.src = "imgs/dino.png"
+  console.log("dino is lose", dinoElem.src)
 }
 
 function handleRun(delta, speedScale) {
   if (isJumping) {
-    console.log("dino is jumping")
-
     dinoElem.src = "imgs/dino.png"
+
+    console.log("dino is jumping", dinoElem.src)
     return
   }
 
-  console.log("dino is staying")
   dinoElem.src = "imgs/dino.png"
+  console.log("dino is staying", dinoElem.src)
 
   currentFrameTime += delta * speedScale
 }

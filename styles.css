@@ -49,6 +49,7 @@ body {
   position: absolute;
   left: 1%;
   height: 30%;
+  transform: scaleX(-1);
   bottom: calc(var(--bottom) * 1%);
 }
 

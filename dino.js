@@ -39,18 +39,32 @@ export function setDinoLose() {
   dinoElem.src = "imgs/dinorun.gif"
   console.log("dino is lose", dinoElem.src)
 }
+//
+// function handleRun(delta, speedScale) {
+//   if (isJumping) {
+//     dinoElem.src = "imgs/dinorun.gif"
+//
+//     console.log("dino is jumping", dinoElem.src)
+//     return
+//   }
+//
+//   dinoElem.src = "imgs/dinorun.gif"
+//   console.log("dino is staying", dinoElem.src)
+//
+//   currentFrameTime += delta * speedScale
+// }
 
 function handleRun(delta, speedScale) {
   if (isJumping) {
-    dinoElem.src = "imgs/dinorun.gif"
-
-    console.log("dino is jumping", dinoElem.src)
+    dinoElem.src = `imgs/dino.png`
     return
   }
 
-  dinoElem.src = "imgs/dinorun.gif"
-  console.log("dino is staying", dinoElem.src)
-
+  if (currentFrameTime >= FRAME_TIME) {
+    dinoFrame = (dinoFrame + 1) % DINO_FRAME_COUNT
+    dinoElem.src = `imgs/dino-run-${dinoFrame}.png`
+    currentFrameTime -= FRAME_TIME
+  }
   currentFrameTime += delta * speedScale
 }
 

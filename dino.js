@@ -36,13 +36,13 @@ export function getDinoRect() {
 }
 
 export function setDinoLose() {
-  dinoElem.src = "imgs/dino.png"
+  dinoElem.src = "imgs/dinorun.gif"
   console.log("dino is lose", dinoElem.src)
 }
 
 function handleRun(delta, speedScale) {
   if (isJumping) {
-    dinoElem.src = "imgs/dino.png"
+    dinoElem.src = "imgs/dinorun.gif"
 
     console.log("dino is jumping", dinoElem.src)
     return

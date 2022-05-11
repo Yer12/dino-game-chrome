@@ -48,7 +48,7 @@ function handleRun(delta, speedScale) {
     return
   }
 
-  dinoElem.src = "imgs/dino.png"
+  dinoElem.src = "imgs/dinorun.gif"
   console.log("dino is staying", dinoElem.src)
 
   currentFrameTime += delta * speedScale

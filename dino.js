@@ -7,7 +7,7 @@ import {
 const dinoElem = document.querySelector("[data-dino]")
 const JUMP_SPEED = 0.45
 const GRAVITY = 0.0015
-const DINO_FRAME_COUNT = 4
+const DINO_FRAME_COUNT = 2
 const FRAME_TIME = 100
 
 let isJumping
@@ -61,14 +61,14 @@ function handleRun(delta, speedScale) {
 
     return
   }
-  dinoElem.src = `imgs/dinorun.gif`
 
-  // if (currentFrameTime >= FRAME_TIME) {
-  //   dinoFrame = (dinoFrame + 1) % DINO_FRAME_COUNT
-  //   console.log(dinoFrame)
-  //
-  //   currentFrameTime -= FRAME_TIME
-  // }
+  if (currentFrameTime >= FRAME_TIME) {
+    dinoFrame = (dinoFrame + 3) % DINO_FRAME_COUNT
+    dinoElem.src = `imgs/dino-run-${dinoFrame}.png`
+    console.log(dinoFrame)
+
+    currentFrameTime -= FRAME_TIME
+  }
   currentFrameTime += delta * speedScale
 }
 

@@ -61,14 +61,14 @@ function handleRun(delta, speedScale) {
 
     return
   }
+  dinoElem.src = `imgs/dinorun.gif`
 
-  if (currentFrameTime >= FRAME_TIME) {
-    dinoFrame = (dinoFrame + 1) % DINO_FRAME_COUNT
-    dinoElem.src = `imgs/dinorun.gif`
-    console.log(dinoFrame)
-
-    currentFrameTime -= FRAME_TIME
-  }
+  // if (currentFrameTime >= FRAME_TIME) {
+  //   dinoFrame = (dinoFrame + 1) % DINO_FRAME_COUNT
+  //   console.log(dinoFrame)
+  //
+  //   currentFrameTime -= FRAME_TIME
+  // }
   currentFrameTime += delta * speedScale
 }
 

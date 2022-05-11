@@ -65,7 +65,7 @@ function handleRun(delta, speedScale) {
   if (currentFrameTime >= FRAME_TIME) {
     let changer;
     setTimeout( (e) => {
-      console.log(e)
+      console.log('E : ',e)
     }, 200)
     dinoElem.src = `imgs/dino-run-${changer%200}.png`
     currentFrameTime -= FRAME_TIME

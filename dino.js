@@ -61,7 +61,6 @@ function handleRun(delta, speedScale) {
   }
   else {
     dinoElem.src = `imgs/dinorun.gif`
-    return
   }
 
   // dinoElem.src = 'imgs/dinorun.gif';

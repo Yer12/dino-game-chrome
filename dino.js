@@ -7,7 +7,7 @@ import {
 const dinoElem = document.querySelector("[data-dino]")
 const JUMP_SPEED = 0.45
 const GRAVITY = 0.0015
-const DINO_FRAME_COUNT = 2
+const DINO_FRAME_COUNT = 4
 const FRAME_TIME = 100
 
 let isJumping
@@ -37,7 +37,7 @@ export function getDinoRect() {
 
 export function setDinoLose() {
   dinoElem.src = `imgs/dino.png`
-  console.log("dino is lose", dinoElem.src)
+  // console.log("dino is lose", dinoElem.src)
 }
 //
 // function handleRun(delta, speedScale) {
@@ -57,20 +57,18 @@ export function setDinoLose() {
 function handleRun(delta, speedScale) {
   if (isJumping) {
     dinoElem.src = `imgs/dino.png`
-    console.log("dino is jumping", dinoElem.src)
+    // console.log("dino is jumping", dinoElem.src)
 
     return
   }
 
   if (currentFrameTime >= FRAME_TIME) {
-    let changer;
-    setTimeout( (e) => {
-      console.log('E : ',e)
-    }, 200)
-    dinoElem.src = `imgs/dino-run-${changer%200}.png`
+    dinoFrame = (dinoFrame + 1) % DINO_FRAME_COUNT
+    dinoElem.src = `imgs/dino-run-${dinoFrame}.png`
+    console.log(dinoFrame)
+
     currentFrameTime -= FRAME_TIME
   }
-
   currentFrameTime += delta * speedScale
 }
 

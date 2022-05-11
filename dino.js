@@ -57,12 +57,16 @@ export function setDinoLose() {
 function handleRun(delta, speedScale) {
   if (isJumping) {
     dinoElem.src = `imgs/dino.png`
+    console.log("dino is jumping", dinoElem.src)
+
     return
   }
 
   if (currentFrameTime >= FRAME_TIME) {
     dinoFrame = (dinoFrame + 1) % DINO_FRAME_COUNT
     dinoElem.src = `imgs/dino-run-${dinoFrame}.png`
+    console.log("dino is running", dinoElem.src)
+
     currentFrameTime -= FRAME_TIME
   }
   currentFrameTime += delta * speedScale

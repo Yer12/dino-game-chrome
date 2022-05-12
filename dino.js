@@ -26,8 +26,8 @@ export function setupDino() {
   document.addEventListener("click", handleonJump)
 }
 
-export function updateDino(delta) {
-  handleRun()
+export function updateDino(delta, speedScale) {
+  handleRun(delta, speedScale)
   handleJump(delta)
 }
 
@@ -54,7 +54,7 @@ export function setDinoLose() {
 //   currentFrameTime += delta * speedScale
 // }
 
-function handleRun() {
+function handleRun(delta, speedScale) {
   if (isJumping) {
 
     dinoElem.src = `imgs/dino.png`

@@ -65,6 +65,7 @@ body {
   background-image: url("https://thumbs.gfycat.com/FrenchAptGopher-size_restricted.gif");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: right;
   transform: scaleX(-1);
   bottom: calc(var(--bottom) * 1%);
 }

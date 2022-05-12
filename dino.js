@@ -60,7 +60,7 @@ function handleRun(delta, speedScale) {
     dinoElem.src = `imgs/dino.png`
     return
   }
-  dinoElem.src = `https://gfycat.com/frenchaptgopher`
+  dinoElem.src = `https://thumbs.gfycat.com/FrenchAptGopher-size_restricted.gif`
 
   // dinoElem.src = 'imgs/dinorun.gif';
 }

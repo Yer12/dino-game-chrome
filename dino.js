@@ -5,6 +5,7 @@ import {
 } from "./updateCustomProperty.js"
 
 const dinoElem = document.querySelector("[data-dino]")
+const dinoImg = document.getElementsByClassName("dino");
 const JUMP_SPEED = 0.45
 const GRAVITY = 0.0015
 const DINO_FRAME_COUNT = 2
@@ -36,7 +37,8 @@ export function getDinoRect() {
 }
 
 export function setDinoLose() {
-  dinoElem.src = `imgs/dino.png`
+  // dinoElem.src = `imgs/dino.png`
+  dinoImg.style.backgroundImage = "imgs/dino.png"
   // console.log("dino is lose", dinoElem.src)
 }
 //
@@ -57,11 +59,13 @@ export function setDinoLose() {
 function handleRun() {
   if (isJumping) {
 
-    dinoElem.src = `imgs/dino.png`
+    // dinoElem.src = `imgs/dino.png`
+    dinoImg.style.backgroundImage = "imgs/dino.png"
     return
   }
-  dinoElem.src = `https://thumbs.gfycat.com/FrenchAptGopher-size_restricted.gif`
 
+  // dinoElem.src = `https://thumbs.gfycat.com/FrenchAptGopher-size_restricted.gif`
+  dinoImg.style.backgroundImage = "https://thumbs.gfycat.com/FrenchAptGopher-size_restricted.gif"
   // dinoElem.src = 'imgs/dinorun.gif';
 }
 

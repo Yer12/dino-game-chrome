@@ -6,6 +6,8 @@ import {
 
 const dinoElem = document.querySelector("[data-dino]")
 const dinoImg = document.getElementsByClassName("dino");
+console.log(".dino",document.getElementsByClassName(".dino"))
+console.log("dino",document.getElementsByClassName(".dino"))
 const JUMP_SPEED = 0.45
 const GRAVITY = 0.0015
 const DINO_FRAME_COUNT = 2

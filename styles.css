@@ -54,9 +54,9 @@ body {
   position: absolute;
   left: 1%;
   width: 110px;
-  background-image: url(https://thumbs.gfycat.com/FrenchAptGopher-size_restricted.gif);
+  height: 30%;
+  background-image: url("https://thumbs.gfycat.com/FrenchAptGopher-size_restricted.gif");
   background-repeat: no-repeat;
-  background-position: center center;
   background-size: cover;
   transform: scaleX(-1);
   bottom: calc(var(--bottom) * 1%);

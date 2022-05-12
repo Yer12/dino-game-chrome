@@ -38,7 +38,7 @@ export function getDinoRect() {
 
 export function setDinoLose() {
   // dinoElem.src = `imgs/dino.png`
-  dinoImg.style.backgroundImage = "imgs/dino.png"
+  dinoImg.style.backgroundImage = "url(imgs/dino.png)"
   // console.log("dino is lose", dinoElem.src)
 }
 //
@@ -60,12 +60,12 @@ function handleRun() {
   if (isJumping) {
 
     // dinoElem.src = `imgs/dino.png`
-    dinoImg.style.backgroundImage = "imgs/dino.png"
+    dinoImg.style.backgroundImage = "url(imgs/dino.png)"
     return
   }
 
   // dinoElem.src = `https://thumbs.gfycat.com/FrenchAptGopher-size_restricted.gif`
-  dinoImg.style.backgroundImage = "https://thumbs.gfycat.com/FrenchAptGopher-size_restricted.gif"
+  dinoImg.style.backgroundImage = "url(https://thumbs.gfycat.com/FrenchAptGopher-size_restricted.gif)"
   // dinoElem.src = 'imgs/dinorun.gif';
 }
 

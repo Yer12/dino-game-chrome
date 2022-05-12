@@ -30,7 +30,7 @@ function update(time) {
   const delta = time - lastTime
 
   updateGround(delta, speedScale)
-  updateDino(delta, speedScale)
+  updateDino()
   updateCactus(delta, speedScale)
   updateSpeedScale(delta)
   updateScore(delta)
@@ -80,7 +80,7 @@ function handleLose() {
     document.addEventListener("keydown", handleStart, { once: true })
     document.addEventListener("click", handleStart, { once: true })
     startScreenElem.classList.remove("hide")
-  }, 100)
+  }, 1000)
 }
 
 function setPixelToWorldScale() {

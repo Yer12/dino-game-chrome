@@ -55,12 +55,12 @@ export function setDinoLose() {
 // }
 
 function handleRun(delta, speedScale) {
-  dinoElem.src = `imgs/dinorun.gif`
-
   if (isJumping) {
+
     dinoElem.src = `imgs/dino.png`
     return
   }
+  dinoElem.src = `https://gfycat.com/frenchaptgopher`
 
   // dinoElem.src = 'imgs/dinorun.gif';
 }

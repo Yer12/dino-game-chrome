@@ -80,7 +80,7 @@ function handleLose() {
     document.addEventListener("keydown", handleStart, { once: true })
     document.addEventListener("click", handleStart, { once: true })
     startScreenElem.classList.remove("hide")
-  }, 1000)
+  }, 100)
 }
 
 function setPixelToWorldScale() {

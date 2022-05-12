@@ -30,7 +30,7 @@ function update(time) {
   const delta = time - lastTime
 
   updateGround(delta, speedScale)
-  updateDino()
+  updateDino(delta, speedScale)
   updateCactus(delta, speedScale)
   updateSpeedScale(delta)
   updateScore(delta)

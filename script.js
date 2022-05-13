@@ -80,7 +80,6 @@ function handleLose() {
     document.addEventListener("click", handleStart, { once: true })
     startScreenElem.classList.remove("hide")
   }, 100)
-  console.log("last core:", score)
 }
 
 function setPixelToWorldScale() {

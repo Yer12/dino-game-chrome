@@ -80,6 +80,22 @@ function handleLose() {
     document.addEventListener("click", handleStart, { once: true })
     startScreenElem.classList.remove("hide")
   }, 100)
+
+  let payload =
+      {
+        phone: JSON.parse(localStorage.getItem('user')).phone,
+        lrt_game_nickname: JSON.parse(localStorage.getItem('user')).name,
+        lrt_game_score: score
+      }
+
+  axios.post('https://api.dev.1fit.app/api/lead/lrt_game/', payload)
+      .then((response) => {
+        console.log(response.data)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+
 }
 
 function setPixelToWorldScale() {

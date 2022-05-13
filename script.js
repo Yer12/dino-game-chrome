@@ -18,9 +18,9 @@ phone.addEventListener('paste', handlePaste)
 
 const formatPhone = (phone) => {
     const newPhone = phone.replace(/\D/g, '').slice(-10);
-
-    // +77774442233
-    return `+7${newPhone}`;
+    console.log(newPhone)
+    // 7774442233
+    return `${newPhone}`;
 };
 
 
@@ -36,6 +36,22 @@ function checkUser() {
                 name: name.value,
                 score: 0
             }))
+
+            let payload =
+                {
+                    phone: formatPhone(phone.value),
+                    lrt_game_nickname: name.value,
+                    lrt_game_score: 0
+                }
+
+            axios.post('https://api.dev.1fit.app/api/lead/lrt_game/', payload)
+                .then((response) => {
+                    console.log(response.data)
+                })
+                .catch((error) => {
+                        console.log(error)
+                })
+
             window.location.href="game.html";
         }
         else {

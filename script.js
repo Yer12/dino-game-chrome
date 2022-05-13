@@ -44,13 +44,27 @@ function checkUser() {
                     lrt_game_score: 0
                 }
 
-            axios.post('https://api.dev.1fit.app/api/lead/lrt_game/', payload)
-                .then((response) => {
-                    console.log(response.data)
+            fetch('https://api.dev.1fit.app/api/lead/lrt_game/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json;charset=utf-8'
+                },
+                body: JSON.stringify(payload)
+            })
+                .then((resp) => {
+                console.log(resp)
                 })
                 .catch((error) => {
-                        console.log(error)
-                })
+                    console.log(error)
+                });
+
+            // axios.post('https://api.dev.1fit.app/api/lead/lrt_game/', payload)
+            //     .then((response) => {
+            //         console.log(response.data)
+            //     })
+            //     .catch((error) => {
+            //             console.log(error)
+            //     })
 
             window.location.href="game.html";
         }

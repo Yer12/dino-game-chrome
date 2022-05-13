@@ -1,20 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" type="module"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.2.2/imask.min.js"
+            integrity="sha512-UiMZ98G+LXQNCpmcn/nxJbjM3RI6zz65RWYDNOplS8R/DaLWXveVs7QoqwqCbfkUqcI1t36PcTYc8gCFs2gkHA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+    ></script>
+
+
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <div class="world" data-world>
-    <div class="score">Score: <b data-score>0</b></div>
-    <div class="start-screen" data-start-screen>Press Any Key To Start</div>
-    <img src="imgs/ground.png" class="ground" data-ground>
-    <img src="imgs/ground.png" class="ground" data-ground>
-    <div class="dino" id="dino" data-dino></div>
-  </div>
+    <div class="container">
+        <div class="form">
+            <h1 class="title">Title</h1>
+
+            <label for="phone">
+                <span>Phone number:</span>
+                <input
+                        type="tel"
+                        class="input phone"
+                        name="phone"
+                        placeholder="+7(7__) ___ __ __"
+                        id="phone"
+                >
+            </label>
+            <label for="name">
+                <span>Your name:</span>
+                <input type="text" class="input name" name="name" placeholder="Ex: Yerlan" id="name">
+            </label>
+
+            <button onclick="checkUser()" type="submit" class="btn">
+                Submit
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

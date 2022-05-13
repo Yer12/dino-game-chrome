@@ -85,7 +85,7 @@ function handleLose() {
       {
         phone: JSON.parse(localStorage.getItem('user')).phone,
         lrt_game_nickname: JSON.parse(localStorage.getItem('user')).name,
-        lrt_game_score: score
+        lrt_game_score: Math.floor(score)
       }
 
   fetch('https://api.dev.1fit.app/api/lead/lrt_game/', {

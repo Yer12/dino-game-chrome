@@ -6,8 +6,7 @@ import {
 
 const dinoElem = document.querySelector("[data-dino]")
 const dinoImg = document.getElementById("dino");
-console.log("dino",document.getElementById("dino"))
-const JUMP_SPEED = 0.45
+const JUMP_SPEED = 0.25
 const GRAVITY = 0.0015
 const DINO_FRAME_COUNT = 2
 const FRAME_TIME = 100
@@ -38,36 +37,16 @@ export function getDinoRect() {
 }
 
 export function setDinoLose() {
-  // dinoElem.src = `imgs/dino.png`
   dinoImg.style.backgroundImage = "url(imgs/dino.png)"
-  // console.log("dino is lose", dinoElem.src)
 }
-//
-// function handleRun(delta, speedScale) {
-//   if (isJumping) {
-//     dinoElem.src = "imgs/dinorun.gif"
-//
-//     console.log("dino is jumping", dinoElem.src)
-//     return
-//   }
-//
-//   dinoElem.src = "imgs/dinorun.gif"
-//   console.log("dino is staying", dinoElem.src)
-//
-//   currentFrameTime += delta * speedScale
-// }
 
 function handleRun() {
   if (isJumping) {
-
-    // dinoElem.src = `imgs/dino.png`
     dinoImg.style.backgroundImage = "url(imgs/dino.png)"
     return
   }
 
-  // dinoElem.src = `https://thumbs.gfycat.com/FrenchAptGopher-size_restricted.gif`
   dinoImg.style.backgroundImage = "url(https://thumbs.gfycat.com/FrenchAptGopher-size_restricted.gif)"
-  // dinoElem.src = 'imgs/dinorun.gif';
 }
 
 function handleJump(delta) {
@@ -84,7 +63,7 @@ function handleJump(delta) {
 }
 
 function onJump(e) {
-  if (e.code !== "Space" || isJumping) return
+  if (e.code !== "Space" || e.code !== "KeyUp" || isJumping) return
 
   yVelocity = JUMP_SPEED
   isJumping = true
@@ -92,7 +71,6 @@ function onJump(e) {
 
 
 function handleonJump(e) {
-  console.log(e)
   if (isJumping) return
 
   yVelocity = JUMP_SPEED

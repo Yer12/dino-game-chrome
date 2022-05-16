@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Document</title>
     <script
             src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.2.2/imask.min.js"
@@ -12,33 +11,63 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
     ></script>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/superstar-2" rel="stylesheet">
 
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div class="container">
+        <header>
+            <a href="" class="rule">Правила</a>
+            <a href="" class="logo"><img src="imgs/logo.png" alt=""></a>
+            <a href="" class="rating">Рейтинг игроков</a>
+        </header>
+        <h1 class="title">Может все бросим <br> и попрыгаем?</h1>
+        <p class="subtitle">
+            <span>Рандомно разыграем PS5 среди тех,</span><br>
+            кто наберёт больше ста очков
+        </p>
         <div class="form">
-            <h1 class="title">Title</h1>
-
-            <label for="phone">
-                <span>Phone number:</span>
-                <input
-                        type="tel"
-                        class="input phone"
-                        name="phone"
-                        placeholder="+7(7__) ___ __ __"
-                        id="phone"
-                >
-            </label>
-            <label for="name">
-                <span>Your name:</span>
-                <input type="text" class="input name" name="name" placeholder="Ex: Yerlan" id="name">
-            </label>
-
-            <button onclick="checkUser()" type="submit" class="btn">
-                Submit
+            <div class="form_inputs">
+                <label for="name">
+                    <input type="text" class="input name" name="name" placeholder="Введите никнейм" id="name">
+                </label>
+                <label for="phone">
+                    <input
+                            type="tel"
+                            class="input phone"
+                            name="phone"
+                            placeholder="+7(7__)___-__-__"
+                            id="phone"
+                    >
+                </label>
+            </div>
+            <button onclick="checkUser()" type="submit"  class="btn">
+                <label class="playBtn">
+                    <label class="playBtn_container">
+                        <label class="playBtn_subcontainer">
+                            Играть
+                        </label>
+                    </label>
+                </label>
             </button>
+
+        </div>
+        <div class="gameInit">
+            <div class="dino"></div>
+            <div class="ground"></div>
+            <div class="cactus">
+                <img src="imgs/lrt%20with%201fit.png" alt="">
+            </div>
+            <div class="cactus adv">
+                <img src="imgs/lrt.png" alt="">
+            </div>
+        </div>
+        <div class="footer">
+            <p></p>
         </div>
     </div>
 

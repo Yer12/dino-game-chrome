@@ -37,16 +37,16 @@ export function getDinoRect() {
 }
 
 export function setDinoLose() {
-  dinoImg.style.backgroundImage = "url(imgs/dino.png)"
+  dinoImg.style.backgroundImage = "url(imgs/hero.png)"
 }
 
 function handleRun() {
   if (isJumping) {
-    dinoImg.style.backgroundImage = "url(imgs/dino.png)"
+    dinoImg.style.backgroundImage = "url(imgs/hero.png)"
     return
   }
 
-  dinoImg.style.backgroundImage = "url(https://thumbs.gfycat.com/FrenchAptGopher-size_restricted.gif)"
+  dinoImg.style.backgroundImage = "url(imgs/run 2.png)"
 }
 
 function handleJump(delta) {

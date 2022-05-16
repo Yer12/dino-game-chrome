@@ -14,7 +14,7 @@ body {
     height: 100%;
     background-color: #2862F5;
     background-size: contain;
-    background-image: url("../setka.png");
+    background-image: url("imgs/setka.png");
 }
 header {
     display: flex;

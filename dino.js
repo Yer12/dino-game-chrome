@@ -40,8 +40,8 @@ export function getDinoRect() {
 
 export function setDinoLose() {
   dinoImg.style.backgroundImage = "url(imgs/hero.png)"
-  cityBg.style.animation = "none";
-  cloud.style.animation = "none";
+  // cityBg.style.animation = "none";
+  // cloud.style.animation = "none";
 }
 
 function handleRun() {

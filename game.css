@@ -115,11 +115,14 @@ body {
 
 .city {
   background-image: url("imgs/city.png");
-  width: 400%;
   height: 100%;
   position: absolute;
-  right: -10%;
-  animation: animateCity 5s linear infinite;
+  --left: 0;
+  width: 300%;
+  bottom: 0;
+  left: calc(var(--left) * 1%)
+
+  /*animation: animateCity 5s linear infinite;*/
 }
 @keyframes animateCity {
   0% {

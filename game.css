@@ -102,7 +102,7 @@ header .rule, header .rating {
 @media screen and (max-width: 800px) {
   .score {
     font-size: 20px;
-    right: 25vw;
+    right: auto;
   }
   .score b {
     font-size: 20px;
@@ -160,7 +160,7 @@ header .rule, header .rating {
 
 @media screen and (max-width: 800px) {
   .cactus {
-    height: 20%;
+    height: 25%;
     left: calc(var(--left) * 2%);
   }
 }
@@ -198,6 +198,12 @@ header .rule, header .rating {
   z-index: -1;
   /*animation: animateCity 5s linear infinite;*/
 }
+@media screen and (max-width: 800px) {
+  .city {
+
+  }
+}
+
 @keyframes animateCity {
   0% {
     right: -200%;

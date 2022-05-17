@@ -109,12 +109,10 @@ function handleLose() {
 
 function setPixelToWorldScale() {
   let worldToPixelScale
-  if (window.innerWidth / window.innerHeight < WORLD_WIDTH / WORLD_HEIGHT) {
-    worldToPixelScale = window.innerWidth / WORLD_WIDTH
-  } else {
-    worldToPixelScale = window.innerHeight / WORLD_HEIGHT
-  }
 
+  if(window.innerWidth < 800) {
+    worldElem.style.height = `380px`
+  }
   worldElem.style.width = `100%`
   worldElem.style.height = `500px`
 }

@@ -318,7 +318,7 @@ label input:-webkit-autofill
         width: 305px;
     }
     .playBtn {
-        width: 200px;
+        width: 200px !important;
         height: 60px;
     }
     .playBtn_container {

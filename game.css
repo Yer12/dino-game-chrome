@@ -76,8 +76,8 @@ header .rule, header .rating {
 
 @media screen and (max-width: 800px) {
   .world {
-    width: 400px;
-    height: 181px;
+    height: 280px !important;
+    width: 100%;
   }
 }
 

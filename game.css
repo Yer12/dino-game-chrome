@@ -22,7 +22,7 @@ header {
   align-items: center;
   width: 100%;
   padding-left: 50px;
-  padding-right: 60px;
+  padding-right: 30px;
   padding-top: 40px;
   justify-content: space-between;
 }
@@ -45,6 +45,9 @@ header .rule, header .rating {
   header .logo {
     width: 50px;
   }
+  header .logo img {
+    width: 100%;
+  }
 }
 
 .username {
@@ -57,7 +60,9 @@ header .rule, header .rating {
 .username_container {
   display: flex;
   align-items: center;
-
+  background: #235AE3;
+  width: 70%;
+  justify-content: center;
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 400;
@@ -75,9 +80,16 @@ header .rule, header .rating {
   text-align: center;
   margin-left: 20px;
   color: #FFFFFF;
-
 }
 
+@media screen and (max-width: 800px) {
+  .username_container {
+    height: 40px;
+    width: 90%;
+    justify-content: center;
+    font-size: 12px;
+  }
+}
 .world {
   overflow: hidden;
   position: relative;

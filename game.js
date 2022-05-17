@@ -111,8 +111,10 @@ function setPixelToWorldScale() {
   let worldToPixelScale
 
   if(window.innerWidth < 800) {
+    console.log("w < 800", window.innerWidth)
     worldElem.style.height = `380px`
   }
+
   worldElem.style.width = `100%`
   worldElem.style.height = `500px`
 }

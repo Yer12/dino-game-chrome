@@ -101,7 +101,7 @@ body {
   position: absolute;
   top: 100px;
   right: 0;
-  animation: animateCloud 3s ease-in-out infinite;
+  animation: animateCloud 5s linear infinite;
 }
 
 @keyframes animateCloud {
@@ -118,11 +118,12 @@ body {
   width: 100%;
   height: 100%;
   position: absolute;
-  animation: animateCity 3s linear infinite;
+  right: -10%;
+  animation: animateCity 5s linear infinite;
 }
 @keyframes animateCity {
   0% {
-    right: 0;
+    right: -10%;
   }
   100% {
     right: 120%;

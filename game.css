@@ -99,6 +99,17 @@ header .rule, header .rating {
   margin-left: 50px;
 }
 
+@media screen and (max-width: 800px) {
+  .score {
+    font-size: 20px;
+    right: 25vw;
+  }
+  .score b {
+    font-size: 20px;
+    margin-left: 5px;
+  }
+}
+
 .start-screen {
   position: absolute;
   font-size: 5vmin;
@@ -149,7 +160,8 @@ header .rule, header .rating {
 
 @media screen and (max-width: 800px) {
   .cactus {
-    height: 27%;
+    height: 20%;
+    left: calc(var(--left) * 2%);
   }
 }
 

@@ -34,10 +34,19 @@ header .rule, header .rating {
   font-size: 20px;
 }
 
+.username {
+  width: 100%;
+  border: 1px solid;
+  display: flex;
+}
+.username_container {
+
+}
 
 .world {
   overflow: hidden;
   position: relative;
+  width: 100%;
 }
 
 @media screen and (max-width: 800px) {
@@ -96,7 +105,7 @@ header .rule, header .rating {
   background-image: url("imgs/run 2.png");
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: right;
+  background-position: bottom;
   bottom: calc(var(--bottom) * 1%);
 }
 @media screen and (max-width: 800px){

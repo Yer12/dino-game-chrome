@@ -115,7 +115,7 @@ body {
 
 .city {
   background-image: url("imgs/city.png");
-  width: 100%;
+  width: 400%;
   height: 100%;
   position: absolute;
   right: -10%;
@@ -123,7 +123,7 @@ body {
 }
 @keyframes animateCity {
   0% {
-    right: -10%;
+    right: -200%;
   }
   100% {
     right: 120%;

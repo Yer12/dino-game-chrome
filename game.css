@@ -9,6 +9,9 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background-color: #2B64F3;
+  background-image: url("imgs/setka.png");
+
 }
 @media screen and (max-width: 980px){
   body {

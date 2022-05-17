@@ -329,3 +329,11 @@ label input:-webkit-autofill
         font-size: 25px;
     }
 }
+@media screen and (max-width: 281px) {
+    .form_inputs label {
+        width: 230px;
+    }
+    .form_inputs label input {
+        width: 255px;
+    }
+}

@@ -246,6 +246,9 @@ label input:-webkit-autofill
     }
 }
 @media screen and (max-width: 990px) {
+    body {
+        height: 100vh;
+    }
     .container {
     }
     .form {
@@ -285,9 +288,6 @@ label input:-webkit-autofill
     }
 }
 @media screen and (max-width: 468px){
-     body {
-         height: 100vh;
-     }
     .container {
         height: 100%;
     }

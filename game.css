@@ -62,11 +62,10 @@ body {
   left: 1%;
   width: 110px;
   height: 30%;
-  background-image: url("imgs/run 2.pngs");
+  background-image: url("imgs/run 2.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
-  transform: scaleX(-1);
   bottom: calc(var(--bottom) * 1%);
 }
 @media screen and (max-width: 800px){

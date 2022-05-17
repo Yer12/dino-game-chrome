@@ -62,7 +62,7 @@ header .rule, header .rating {
   font-size: 32px;
   line-height: 100.3%;
   text-align: center;
-
+  margin-left: 20px;
   color: #FFFFFF;
 
 }
@@ -92,7 +92,7 @@ header .rule, header .rating {
 
   position: absolute;
   right: 45vw;
-  bottom: 100px;
+  bottom: 40px;
   z-index: 2;
 }
 .score b {
@@ -135,8 +135,8 @@ header .rule, header .rating {
 }
 @media screen and (max-width: 800px){
    .dino {
-     width: 27px;
-     height: 36px;
+     width: 60px;
+     height: 60px;
    }
 }
 

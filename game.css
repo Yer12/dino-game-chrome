@@ -52,7 +52,6 @@ header .rule, header .rating {
 
 .username {
   width: 100%;
-  border: 1px solid;
   display: flex;
   justify-content: center;
   margin-top: 40px;
@@ -81,13 +80,21 @@ header .rule, header .rating {
   margin-left: 20px;
   color: #FFFFFF;
 }
+.username_container img {
+  width: 30px;
+  margin-right: 5px;
+  margin-top: 4px;
+}
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 495px) {
   .username_container {
     height: 40px;
     width: 90%;
     justify-content: center;
     font-size: 12px;
+  }
+  .username_container b {
+    font-size: 22px;
   }
 }
 .world {
@@ -125,7 +132,6 @@ header .rule, header .rating {
 @media screen and (max-width: 800px) {
   .score {
     font-size: 20px;
-    right: auto;
   }
   .score b {
     font-size: 20px;

@@ -8,8 +8,19 @@
   <link rel="stylesheet" href="game.css">
 </head>
 <body>
+  <header>
+    <a href="" class="rule">Правила</a>
+    <a href="" class="logo"><img src="imgs/logo.png" alt=""></a>
+    <a href="" class="rating">Рейтинг игроков</a>
+  </header>
+  <div class="username">
+    <div class="username_container">
+      <p>Username : </p>
+      <b>1050</b>
+      <img src="imgs/cup.svg" alt="">
+    </div>
+  </div>
   <div class="world" data-world>
-    <div class="score">Score: <b data-score>0</b></div>
     <div class="start-screen" data-start-screen>Press Any Key To Start</div>
     <div class="cloud" id="cloud"></div>
     <div class="city" data-city></div>
@@ -18,7 +29,7 @@
     <div class="ground" data-ground> </div>
     <div class="dino" id="dino" data-dino></div>
   </div>
-
+  <div class="score">Счет: <b data-score>0</b></div>
   <script src="game.js" type="module"></script>
 </body>
 </html>

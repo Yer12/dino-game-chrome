@@ -6,6 +6,8 @@ import {
 
 const dinoElem = document.querySelector("[data-dino]")
 const dinoImg = document.getElementById("dino");
+const cityBg = document.getElementsByClassName("city");
+const cloud = document.getElementsByClassName("cloud")
 const JUMP_SPEED = 0.45
 const GRAVITY = 0.0015
 const DINO_FRAME_COUNT = 2
@@ -38,6 +40,8 @@ export function getDinoRect() {
 
 export function setDinoLose() {
   dinoImg.style.backgroundImage = "url(imgs/hero.png)"
+  cityBg.style.animation = "none";
+  cloud.style.animation = "none";
 }
 
 function handleRun() {

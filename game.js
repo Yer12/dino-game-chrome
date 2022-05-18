@@ -88,13 +88,6 @@ function handleLose() {
   const modal = document.getElementById('modal-one');
   modal.classList.add('open');
   modalScore.innerText = JSON.parse(localStorage.getItem('user')).score
-  const exits = modal.querySelectorAll('.modal-exit');
-  exits.forEach(function (exit) {
-    exit.addEventListener('click', function (event) {
-      event.preventDefault();
-      modal.classList.remove('open');
-    })
-  })
 
   setTimeout(() => {
     playAgain.addEventListener("click", handleStart, { once: true })
@@ -126,6 +119,12 @@ function handleLose() {
       });
 
 }
+
+const exit = modal.querySelector('.modal-exit');
+exit.addEventListener('click', function (event) {
+  event.preventDefault();
+  modal.classList.remove('open');
+})
 
 function setPixelToWorldScale() {
   let worldToPixelScale

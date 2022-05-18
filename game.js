@@ -87,11 +87,11 @@ function handleLose() {
   // Modal
   const modalScore = document.getElementById('modal-score');
   modal.classList.add('open');
-  document.querySelector('.score-span').innerText = JSON.parse(localStorage.getItem('user')).score
+  document.getElementsByClassName('score-span')[0].innerText = JSON.parse(localStorage.getItem('user')).score
 
   setTimeout(() => {
     playAgain.addEventListener("click", handleStart, { once: true })
-
+    modal.classList.remove('open');
     // document.addEventListener("keydown", handleStart, { once: true })
     // document.addEventListener("click", handleStart, { once: true })
     startScreenElem.classList.remove("hide")

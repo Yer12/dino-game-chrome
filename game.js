@@ -116,8 +116,10 @@ function handleLose() {
 
 }
 
+playAgain.addEventListener('click', function () {
+  modal.classList.remove('open');
+})
 playAgain.addEventListener("click", handleStart, { once: true })
-modal.classList.remove('open');
 
 const exit = document.querySelector('.modal-exit');
 exit.addEventListener('click', function (event) {

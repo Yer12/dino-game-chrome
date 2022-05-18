@@ -87,7 +87,7 @@ function handleLose() {
   // Modal
   const modalScore = document.getElementById('modal-score');
   modal.classList.add('open');
-  modalScore.innerText = JSON.parse(localStorage.getItem('user')).score
+  document.querySelector('.score-span').innerText = JSON.parse(localStorage.getItem('user')).score
 
   setTimeout(() => {
     playAgain.addEventListener("click", handleStart, { once: true })
@@ -121,6 +121,12 @@ function handleLose() {
 }
 
 const exit = document.querySelector('.modal-exit');
+exit.addEventListener('click', function (event) {
+  console.log('clicked!')
+  event.preventDefault();
+  modal.classList.remove('open');
+})
+const exit = document.querySelector('.modal-close');
 exit.addEventListener('click', function (event) {
   console.log('clicked!')
   event.preventDefault();

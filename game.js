@@ -10,6 +10,8 @@ const SPEED_SCALE_INCREASE = 0.00001
 const worldElem = document.querySelector("[data-world]")
 const scoreElem = document.querySelector("[data-score]")
 const startScreenElem = document.querySelector("[data-start-screen]")
+const playAgain = document.getElementById("playAgain");
+
 
 setPixelToWorldScale()
 window.addEventListener("resize", setPixelToWorldScale)
@@ -17,6 +19,8 @@ if(checkLose) {
   document.addEventListener("keydown", handleStart, { once: true })
   document.addEventListener("click", handleStart, { once: true })
 }
+
+
 
 let lastTime
 let speedScale
@@ -78,9 +82,25 @@ function handleStart() {
 
 function handleLose() {
   setDinoLose()
+
+  // Modal
+  const modalScore = document.getElementById('modal-score');
+  const modal = document.getElementById('modal-one');
+  modal.classList.add('open');
+  modalScore.innerText = JSON.parse(localStorage.getItem('user')).score
+  const exits = modal.querySelectorAll('.modal-exit');
+  exits.forEach(function (exit) {
+    exit.addEventListener('click', function (event) {
+      event.preventDefault();
+      modal.classList.remove('open');
+    })
+  })
+
   setTimeout(() => {
-    document.addEventListener("keydown", handleStart, { once: true })
-    document.addEventListener("click", handleStart, { once: true })
+    playAgain.addEventListener("click", handleStart, { once: true })
+
+    // document.addEventListener("keydown", handleStart, { once: true })
+    // document.addEventListener("click", handleStart, { once: true })
     startScreenElem.classList.remove("hide")
   }, 100)
 

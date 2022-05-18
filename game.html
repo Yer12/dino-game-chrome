@@ -36,6 +36,42 @@
     <div class="dino" id="dino" data-dino></div>
   </div>
   <div class="score">Счет <b data-score>0</b></div>
+
+  <div class="modal" id="modal-one">
+    <div class="modal-bg modal-exit"></div>
+    <div class="modal-container">
+      <header>
+        <img src="imgs/logo.png" alt="">
+      </header>
+      <div class="modal-subcontainer">
+        <div class="modal-score">
+          <div class="modal-img">
+            <p class="your-result">Твой результат: </p>
+            <p class="your-score"><span class="score-span">10000</span> очков </p>
+            <img src="imgs/lose.png" alt="">
+          </div>
+          <div class="modal-share">
+            <img src="imgs/screen.svg" alt="">
+            <p>НЕ ЗАБУДЬ ПОДЕЛИТЬСЯ В СТОРИС</p>
+          </div>
+        </div>
+        <div class="modal-text">
+          <p class="modal-title">Если бы ты строил ЛРТ,  то его бы уже закончили</p>
+          <div class="modal-actions">
+            <button id="playAgain" class="action">
+              <img src="imgs/playAgain.png" alt="">
+            </button>
+            <button class="action">
+              <img src="imgs/share.png" alt="">
+            </button>
+          </div>
+        </div>
+      </div>
+      <button class="modal-close modal-exit"><img src="imgs/close.svg" alt=""></button>
+    </div>
+  </div>
+
+
   <script src="game.js" type="module"></script>
 </body>
 </html>

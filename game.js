@@ -85,15 +85,11 @@ function handleLose() {
   setDinoLose()
 
   // Modal
-  const modalScore = document.getElementById('modal-score');
   modal.classList.add('open');
+  console.log('modal is opened')
   document.getElementsByClassName('score-span')[0].innerText = JSON.parse(localStorage.getItem('user')).score
 
   setTimeout(() => {
-    playAgain.addEventListener("click", handleStart, { once: true })
-    modal.classList.remove('open');
-    // document.addEventListener("keydown", handleStart, { once: true })
-    // document.addEventListener("click", handleStart, { once: true })
     startScreenElem.classList.remove("hide")
   }, 100)
 
@@ -120,17 +116,20 @@ function handleLose() {
 
 }
 
+playAgain.addEventListener("click", handleStart, { once: true })
+modal.classList.remove('open');
+
 const exit = document.querySelector('.modal-exit');
 exit.addEventListener('click', function (event) {
   console.log('clicked!')
   event.preventDefault();
   modal.classList.remove('open');
 })
-const closeModal = document.querySelector('.modal-close');
-closeModal.addEventListener('click', function (event) {
-  console.log('clicked!')
-  event.preventDefault();
-  modal.classList.remove('open');
+const modalClose = document.getElementById('modal-close');
+modalClose.addEventListener('click', function (event) {
+  console.log('close clicked')
+  event.preventDefault()
+  modal.classList.remove('open')
 })
 
 function setPixelToWorldScale() {

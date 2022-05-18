@@ -120,7 +120,7 @@ function handleLose() {
 
 }
 
-const exit = modal.querySelector('.modal-exit');
+const exit = document.querySelector('.modal-exit');
 exit.addEventListener('click', function (event) {
   event.preventDefault();
   modal.classList.remove('open');

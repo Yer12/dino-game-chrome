@@ -84,11 +84,6 @@ const modal = document.getElementById('modal-one');
 function handleLose() {
   setDinoLose()
 
-  // Modal
-  modal.classList.add('open');
-  console.log('modal is opened')
-  document.getElementsByClassName('score-span')[0].innerText = JSON.parse(localStorage.getItem('user')).score
-
   setTimeout(() => {
     startScreenElem.classList.remove("hide")
   }, 100)
@@ -114,6 +109,15 @@ function handleLose() {
         console.log(error)
       });
 
+  // Modal
+  modal.classList.add('open');
+  console.log('modal is opened')
+  document.getElementsByClassName('score-span')[0].innerText = JSON.parse(localStorage.getItem('user')).score
+  localStorage.setItem('user', {
+    phone: JSON.parse(localStorage.getItem('user')).phone,
+    lrt_game_nickname: JSON.parse(localStorage.getItem('user')).name,
+    lrt_game_score: parseInt(score)
+  })
 }
 
 playAgain.addEventListener('click', function () {

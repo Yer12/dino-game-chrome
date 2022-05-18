@@ -79,13 +79,13 @@ function handleStart() {
   startScreenElem.classList.add("hide")
   window.requestAnimationFrame(update)
 }
+const modal = document.getElementById('modal-one');
 
 function handleLose() {
   setDinoLose()
 
   // Modal
   const modalScore = document.getElementById('modal-score');
-  const modal = document.getElementById('modal-one');
   modal.classList.add('open');
   modalScore.innerText = JSON.parse(localStorage.getItem('user')).score
 
@@ -122,6 +122,7 @@ function handleLose() {
 
 const exit = document.querySelector('.modal-exit');
 exit.addEventListener('click', function (event) {
+  console.log('clicked!')
   event.preventDefault();
   modal.classList.remove('open');
 })

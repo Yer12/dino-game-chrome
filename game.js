@@ -126,8 +126,8 @@ exit.addEventListener('click', function (event) {
   event.preventDefault();
   modal.classList.remove('open');
 })
-const exit = document.querySelector('.modal-close');
-exit.addEventListener('click', function (event) {
+const closeModal = document.querySelector('.modal-close');
+closeModal.addEventListener('click', function (event) {
   console.log('clicked!')
   event.preventDefault();
   modal.classList.remove('open');

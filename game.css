@@ -122,7 +122,7 @@ header .rule, header .rating {
 
   position: absolute;
   right: 45vw;
-  bottom: 50px;
+  bottom: 120px;
   z-index: 0;
 }
 .score b {
@@ -141,6 +141,8 @@ header .rule, header .rating {
 }
 
 .start-screen {
+  font-family: 'Superstar';
+  color: #FFFFFF;
   position: absolute;
   font-size: 5vmin;
   top: 50%;
@@ -243,6 +245,14 @@ header .rule, header .rating {
   }
 }
 
+.footer {
+  width: 100%;
+  height: 400px;
+  background: #1B50D3;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
 
 
 
@@ -440,6 +450,14 @@ header .rule, header .rating {
   .modal-text {
     margin-top: 10px;
     text-align: center;
+  }
+  .modal-share {
+    position: absolute;
+    bottom: 30px;
+  }
+  .modal-actions {
+    display: flex;
+    flex-direction: column;
   }
 }
 @media screen and (max-width: 480px) {

@@ -280,11 +280,11 @@ header .rule, header .rating {
   padding-left: 40px;
   padding-right: 40px;
 }
-@media screen and (max-width: 1760px) {
-  .modal-container {
-    width: 60%;
-  }
-}
+/*@media screen and (max-width: 1760px) {*/
+/*  .modal-container {*/
+/*    width: 70%;*/
+/*  }*/
+/*}*/
 @media screen and (max-width: 1400px) {
   .modal-container {
     width: 70%;

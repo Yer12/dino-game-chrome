@@ -250,6 +250,21 @@ header .rule, header .rating {
   }
 }
 
+
+.plane {
+  width: 350px;
+  height: 100px;
+  background-image: url("imgs/plane.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  font-size: 30px;
+  font-family: 'Superstar';
+  text-align: right;
+  color: #fff;
+}
+
+
 .footer {
   width: 100%;
   height: 400px;

@@ -296,7 +296,7 @@ header .rule, header .rating {
   }
 }
 
-.modal-container header {
+.modal-container .header {
   width: 100%;
   text-align: center;
   margin-top: 20px;

@@ -106,6 +106,9 @@ function handleLose() {
     console.log('clicked!')
     event.preventDefault();
     modal.classList.remove('open');
+
+    document.addEventListener("keydown", handleStart, { once: true })
+    document.addEventListener("click", handleStart, { once: true })
   })
 
   const modalClose = document.getElementById('modal-close');
@@ -113,6 +116,9 @@ function handleLose() {
     console.log('close clicked')
     event.preventDefault()
     modal.classList.remove('open')
+
+    document.addEventListener("keydown", handleStart, { once: true })
+    document.addEventListener("click", handleStart, { once: true })
   })
 
   let payload =

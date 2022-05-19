@@ -90,7 +90,7 @@ function handleLose() {
 
     modal.classList.add('open');
     console.log('modal is opened')
-    document.getElementsByClassName('score-span')[0].innerText = score
+    document.getElementsByClassName('score-span')[0].innerText = Math.floor(score)
 
 
   }, 100)

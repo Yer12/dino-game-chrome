@@ -152,6 +152,7 @@ function handleLose() {
 
   if(oldScore < newScore) {
     localStorage.setItem('lrt_game_score', ''+newScore)
+    document.getElementById('top-player-score').innerText = ''+newScore
   }
 
   let payload =

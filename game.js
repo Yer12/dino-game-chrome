@@ -14,10 +14,16 @@ const startScreenElem = document.querySelector("[data-start-screen]")
 
 setPixelToWorldScale()
 window.addEventListener("resize", setPixelToWorldScale)
-if(checkLose()) {
-  document.addEventListener("keydown", handleStart, { once: true })
-  document.addEventListener("click", handleStart, { once: true })
+if(checkLose) {
+  document.addEventListener("keydown", () => {
+    handleStart()
+  }, { once: true })
+  document.addEventListener("click", () => {
+    handleStart()
+  }, { once: true })
+  console.log(checkLose(), checkLose)
 }
+
 
 
 

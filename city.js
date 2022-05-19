@@ -4,8 +4,9 @@ import {
     setCustomProperty,
 } from "./updateCustomProperty.js"
 
-const SPEED = 0.05
+const SPEED = 0.005
 const cityElems = document.querySelectorAll("[data-city]")
+
 
 export function setupCity() {
     setCustomProperty(cityElems[0], "--left", 0)

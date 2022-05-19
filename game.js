@@ -1,5 +1,6 @@
 import { updateGround, setupGround } from "./ground.js"
 import { updateCity, setupCity } from "./city.js"
+import { updatePlane, setupPlane } from "./plane.js"
 import { updateDino, setupDino, getDinoRect, setDinoLose } from "./dino.js"
 import { updateCactus, setupCactus, getCactusRects } from "./cactus.js"
 
@@ -42,6 +43,7 @@ function update(time) {
 
   updateGround(delta, speedScale)
   updateCity(delta, speedScale)
+  updatePlane(delta, speedScale)
   updateDino(delta, speedScale)
   updateCactus(delta, speedScale)
   updateSpeedScale(delta)
@@ -81,6 +83,7 @@ function handleStart() {
   score = 0
   setupGround()
   setupCity()
+  setupPlane()
   setupDino()
   setupCactus()
   startScreenElem.classList.add("hide")

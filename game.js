@@ -145,10 +145,10 @@ function handleLose() {
   })
 
   let oldScore = localStorage.getItem('lrt_game_score');
-  let newScore = score
+  let newScore = parseInt(score)
 
   if(oldScore < newScore) {
-    localStorage.setItem('lrt_game_score', newScore)
+    localStorage.setItem('lrt_game_score', ''+newScore)
   }
 
   let payload =

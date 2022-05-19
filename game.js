@@ -10,7 +10,6 @@ const SPEED_SCALE_INCREASE = 0.00001
 const worldElem = document.querySelector("[data-world]")
 const scoreElem = document.querySelector("[data-score]")
 const startScreenElem = document.querySelector("[data-start-screen]")
-const playAgain = document.getElementById("playAgain");
 
 
 setPixelToWorldScale()
@@ -79,13 +78,42 @@ function handleStart() {
   startScreenElem.classList.add("hide")
   window.requestAnimationFrame(update)
 }
+const modal = document.getElementById('modal-one');
+const playAgain = document.getElementById("playAgain");
 
 function handleLose() {
   setDinoLose()
 
   setTimeout(() => {
     startScreenElem.classList.remove("hide")
+    // Modal
+
+    modal.classList.add('open');
+    console.log('modal is opened')
+    document.getElementsByClassName('score-span')[0].innerText = score
+
+
   }, 100)
+
+  playAgain.addEventListener('click', function () {
+    modal.classList.remove('open');
+  })
+  playAgain.addEventListener("click", handleStart, { once: true })
+
+
+  const exit = document.querySelector('.modal-exit');
+  exit.addEventListener('click', function (event) {
+    console.log('clicked!')
+    event.preventDefault();
+    modal.classList.remove('open');
+  })
+
+  const modalClose = document.getElementById('modal-close');
+  modalClose.addEventListener('click', function (event) {
+    console.log('close clicked')
+    event.preventDefault()
+    modal.classList.remove('open')
+  })
 
   let payload =
       {
@@ -110,37 +138,8 @@ function handleLose() {
 
 }
 
-if(checkLose()) {
-  // Modal
-  const modal = document.getElementById('modal-one');
-
-  modal.classList.add('open');
-  console.log('modal is opened')
-  console.log(score)
-  document.getElementsByClassName('score-span')[0].innerText = score
 
 
-
-  playAgain.addEventListener('click', function () {
-    modal.classList.remove('open');
-  })
-  playAgain.addEventListener("click", handleStart, { once: true })
-
-}
-
-const exit = document.querySelector('.modal-exit');
-exit.addEventListener('click', function (event) {
-  console.log('clicked!')
-  event.preventDefault();
-  modal.classList.remove('open');
-})
-
-const modalClose = document.getElementById('modal-close');
-modalClose.addEventListener('click', function (event) {
-  console.log('close clicked')
-  event.preventDefault()
-  modal.classList.remove('open')
-})
 
 function setPixelToWorldScale() {
   let worldToPixelScale

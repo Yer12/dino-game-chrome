@@ -89,6 +89,9 @@ function handleStart() {
 const modal = document.getElementById('modal-one');
 const playAgain = document.getElementById("playAgain");
 
+document.getElementById('top-player').innerText = localStorage.getItem('lrt_game_nickname')
+document.getElementById('top-player-score').innerText = localStorage.getItem('lrt_game_score')
+
 function handleLose() {
   setDinoLose()
 

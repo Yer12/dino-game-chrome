@@ -89,7 +89,7 @@ header .rule, header .rating {
   margin-top: 4px;
 }
 
-@media screen and (max-width: 495px) {
+@media screen and (max-width: 800px) {
   .username_container {
     height: 40px;
     width: 90%;
@@ -173,7 +173,7 @@ header .rule, header .rating {
 .dino {
   --bottom: 0;
   position: absolute;
-  left: 1%;
+  left: 6%;
   width: 100px;
   height: 25%;
   background-image: url("imgs/run 2.png");

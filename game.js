@@ -129,7 +129,6 @@ function handleLose() {
 
   const modalClose = document.getElementById('modal-close');
   modalClose.addEventListener('click', function (event) {
-    console.log('close clicked')
     event.preventDefault()
     modal.classList.remove('open')
 
@@ -145,10 +144,17 @@ function handleLose() {
     }
   })
 
+  let oldScore = localStorage.getItem('lrt_game_score');
+  let newScore = score
+
+  if(oldScore < newScore) {
+    localStorage.setItem('lrt_game_score', newScore)
+  }
+
   let payload =
       {
-        phone: JSON.parse(localStorage.getItem('user')).phone,
-        lrt_game_nickname: JSON.parse(localStorage.getItem('user')).name,
+        phone: localStorage.getItem('lrt_game_phone'),
+        lrt_game_nickname: localStorage.getItem('lrt_game_nickname'),
         lrt_game_score: parseInt(score)
       }
 

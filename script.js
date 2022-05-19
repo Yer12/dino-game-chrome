@@ -31,11 +31,9 @@ function checkUser() {
     }
     else {
         if(phone.value.length === 16) {
-            localStorage.setItem('user', JSON.stringify({
-                phone: formatPhone(phone.value),
-                name: name.value,
-                score: 0
-            }))
+            localStorage.setItem('lrt_game_phone', formatPhone(phone.value))
+            localStorage.setItem('lrt_game_nickname', name.value)
+            localStorage.setItem('lrt_game_score', '0')
 
             let payload =
                 {

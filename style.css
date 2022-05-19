@@ -5,6 +5,7 @@
 }
 body {
     width: 100%;
+    overflow-y: hidden;
 }
 
 .container {
@@ -199,7 +200,7 @@ label input:-webkit-autofill
 .footer {
     background: #1B50D3;
     width: 100%;
-    height: 200px;
+    height: 400px;
 }
 
 

@@ -51,7 +51,7 @@ function handleRun() {
     return
   }
 
-  dinoImg.style.backgroundImage = "url(imgs/run 2.png)"
+  dinoImg.style.backgroundImage = "url(imgs/runu.gif)"
 }
 
 function handleJump(delta) {

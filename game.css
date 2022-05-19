@@ -6,7 +6,7 @@
 body {
   margin: 0;
   min-height: 100vh;
-  height: 100vh;
+  overflow-y: hidden;
   background-color: #2B64F3;
   background-image: url("imgs/setka.png");
 
@@ -39,6 +39,8 @@ header .rule, header .rating {
 @media screen and (max-width: 990px) {
   header {
     margin-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   header a{
     font-size: 12px !important;
@@ -97,6 +99,9 @@ header .rule, header .rating {
   .username_container b {
     font-size: 22px;
   }
+  .username_container img {
+    width: 18px;
+  }
 }
 .world {
   overflow: hidden;
@@ -132,7 +137,7 @@ header .rule, header .rating {
 
 @media screen and (max-width: 800px) {
   .score {
-    bottom: 170px;
+    bottom: 280px;
     font-size: 20px;
   }
   .score b {
@@ -252,6 +257,11 @@ header .rule, header .rating {
   background: #1B50D3;
   z-index: -1;
 }
+@media screen and (max-width: 800px){
+  .footer {
+    height: inherit;
+  }
+}
 
 
 
@@ -369,7 +379,7 @@ header .rule, header .rating {
   margin-top: 20px;
   background: rgba(27, 80, 211, 0.53);
 
-  font-family: 'Superstar';
+   font-family: 'Superstar';
   font-style: normal;
   font-weight: 400;
   font-size: 20px;

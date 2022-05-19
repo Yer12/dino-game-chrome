@@ -115,8 +115,16 @@ function handleLose() {
     event.preventDefault();
     modal.classList.remove('open');
 
-    document.addEventListener("keydown", handleStart, { once: true })
-    document.addEventListener("click", handleStart, { once: true })
+    if(window.innerWidth > 978) {
+      document.addEventListener("keydown", () => {
+        handleStart()
+      }, { once: true })
+    }
+    else {
+      document.addEventListener("click", () => {
+        handleStart()
+      }, { once: true })
+    }
   })
 
   const modalClose = document.getElementById('modal-close');
@@ -125,8 +133,16 @@ function handleLose() {
     event.preventDefault()
     modal.classList.remove('open')
 
-    document.addEventListener("keydown", handleStart, { once: true })
-    document.addEventListener("click", handleStart, { once: true })
+    if(window.innerWidth > 978) {
+      document.addEventListener("keydown", () => {
+        handleStart()
+      }, { once: true })
+    }
+    else {
+      document.addEventListener("click", () => {
+        handleStart()
+      }, { once: true })
+    }
   })
 
   let payload =

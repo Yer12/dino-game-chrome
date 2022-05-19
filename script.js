@@ -58,14 +58,6 @@ function checkUser() {
                     console.log(error)
                 });
 
-            // axios.post('https://api.dev.1fit.app/api/lead/lrt_game/', payload)
-            //     .then((response) => {
-            //         console.log(response.data)
-            //     })
-            //     .catch((error) => {
-            //             console.log(error)
-            //     })
-
             window.location.href="game.html";
         }
         else {

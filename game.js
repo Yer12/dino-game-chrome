@@ -79,7 +79,6 @@ function handleStart() {
   startScreenElem.classList.add("hide")
   window.requestAnimationFrame(update)
 }
-const modal = document.getElementById('modal-one');
 
 function handleLose() {
   setDinoLose()
@@ -109,21 +108,25 @@ function handleLose() {
         console.log(error)
       });
 
-  // Modal
-  modal.classList.add('open');
-  console.log('modal is opened')
-  document.getElementsByClassName('score-span')[0].innerText = JSON.parse(localStorage.getItem('user')).score
-  localStorage.setItem('user', {
-    phone: JSON.parse(localStorage.getItem('user')).phone,
-    lrt_game_nickname: JSON.parse(localStorage.getItem('user')).name,
-    lrt_game_score: parseInt(score)
-  })
 }
 
-playAgain.addEventListener('click', function () {
-  modal.classList.remove('open');
-})
-playAgain.addEventListener("click", handleStart, { once: true })
+if(checkLose()) {
+  // Modal
+  const modal = document.getElementById('modal-one');
+
+  modal.classList.add('open');
+  console.log('modal is opened')
+  console.log(score)
+  document.getElementsByClassName('score-span')[0].innerText = score
+
+
+
+  playAgain.addEventListener('click', function () {
+    modal.classList.remove('open');
+  })
+  playAgain.addEventListener("click", handleStart, { once: true })
+
+}
 
 const exit = document.querySelector('.modal-exit');
 exit.addEventListener('click', function (event) {
@@ -131,6 +134,7 @@ exit.addEventListener('click', function (event) {
   event.preventDefault();
   modal.classList.remove('open');
 })
+
 const modalClose = document.getElementById('modal-close');
 modalClose.addEventListener('click', function (event) {
   console.log('close clicked')

@@ -95,6 +95,7 @@ label input {
     border: none;
     font-family: 'Manrope', serif;
     font-style: normal;
+    border-radius: 0 !important;
     font-weight: 500;
     font-size: 22px;
     line-height: 124.1%;

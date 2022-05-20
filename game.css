@@ -265,7 +265,6 @@ header .rule, header .rating {
   color: #fff;
   right: -700px;
   position: absolute;
-  --left: 0;
   left: calc(var(--left) * 1%);
 
 }

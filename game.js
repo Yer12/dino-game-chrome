@@ -52,7 +52,7 @@ function update(time) {
   updateCactus(delta, speedScale)
   updateSpeedScale(delta)
   updateScore(delta)
-  if (checkLose()) return handleLose()
+  if (checkLose) return handleLose()
 
   lastTime = time
   window.requestAnimationFrame(update)

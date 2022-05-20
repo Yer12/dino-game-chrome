@@ -28,7 +28,7 @@ if(checkLose) {
 }
 
 window.onfocus = function (ev) {
-  console.log("gained focus")
+  console.log("gained focus", checkLose())
   handleLose()
 }
 

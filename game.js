@@ -30,7 +30,9 @@ if(checkLose) {
 window.onblur = function (ev) {
   console.log("gained focus", checkLose())
   // checkLose(true)
-  handleLose()
+  if(score > 0) {
+    handleLose()
+  }
 }
 
 let lastTime

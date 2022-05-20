@@ -4,7 +4,7 @@ import {
     setCustomProperty,
 } from "./updateCustomProperty.js"
 
-const SPEED = 0.09999
+const SPEED = 0.0099999999999
 const planeElems = document.querySelectorAll("[data-plane]")
 const planeTexts = [
     'Just jump!',

@@ -27,8 +27,10 @@ if(checkLose) {
   }
 }
 
-
-
+window.onfocus = function (ev) {
+  console.log("gained focus")
+  handleLose()
+}
 
 let lastTime
 let speedScale

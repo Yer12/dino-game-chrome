@@ -27,10 +27,8 @@ if(checkLose) {
   }
 }
 
-console.log('checklose',checkLose())
 window.onfocus = function (ev) {
   console.log("gained focus")
-  // checkLose = true
   handleLose()
 }
 
@@ -52,7 +50,7 @@ function update(time) {
   updateCactus(delta, speedScale)
   updateSpeedScale(delta)
   updateScore(delta)
-  if (checkLose) return handleLose()
+  if (checkLose()) return handleLose()
 
   lastTime = time
   window.requestAnimationFrame(update)

@@ -263,7 +263,7 @@ header .rule, header .rating {
   padding-right: 60px;
   text-align: right;
   color: #fff;
-  right: -700px;
+  --left: -700px;
   position: absolute;
   left: calc(var(--left) * 1%);
 

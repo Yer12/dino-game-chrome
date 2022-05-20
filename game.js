@@ -14,7 +14,7 @@ const startScreenElem = document.querySelector("[data-start-screen]")
 
 setPixelToWorldScale()
 window.addEventListener("resize", setPixelToWorldScale)
-if(checkLose()) {
+if(checkLose) {
   if(window.innerWidth > 978) {
     document.addEventListener("keydown", () => {
       handleStart()
@@ -29,6 +29,7 @@ if(checkLose()) {
 
 window.onblur = function (ev) {
   console.log("gained focus", checkLose())
+  // checkLose(true)
   handleLose()
 }
 

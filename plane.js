@@ -31,8 +31,8 @@ export function updatePlane(delta, speedScale) {
     planeElems.forEach((plane, index) => {
         incrementCustomProperty(plane, "--left", delta * speedScale * SPEED * -1)
 
-        if (getCustomProperty(plane, "--left") <= -200 * index) {
-            incrementCustomProperty(plane, "--left", 200 * index +1)
+        if (getCustomProperty(plane, "--left") <= -200 * (index+1)) {
+            incrementCustomProperty(plane, "--left", 200 * (index +1))
         }
     })
 }

@@ -14,7 +14,7 @@ const startScreenElem = document.querySelector("[data-start-screen]")
 
 setPixelToWorldScale()
 window.addEventListener("resize", setPixelToWorldScale)
-if(checkLose) {
+if(checkLose()) {
   if(window.innerWidth > 978) {
     document.addEventListener("keydown", () => {
       handleStart()
@@ -27,9 +27,8 @@ if(checkLose) {
   }
 }
 
-window.onfocus = function (ev) {
+window.onblur = function (ev) {
   console.log("gained focus", checkLose())
-  checkLose(true)
   handleLose()
 }
 
@@ -57,9 +56,8 @@ function update(time) {
   window.requestAnimationFrame(update)
 }
 
-function checkLose(forcedLose = false) {
+function checkLose() {
   const dinoRect = getDinoRect()
-  console.log(dinoRect)
     return getCactusRects().some(rect => isCollision(rect, dinoRect)) || forcedLose;
 }
 

@@ -29,7 +29,6 @@ export function updatePlane(delta, speedScale) {
         incrementCustomProperty(plane, "--left", delta * speedScale * SPEED * -1)
 
         if (getCustomProperty(plane, "--left") <= -100) {
-            console.log(Math.floor(Math.random() * planeTexts.length))
             incrementCustomProperty(plane, "--left", 200)
             planeText.innerText = planeTexts[Math.floor(Math.random() * planeTexts.length)]
         }

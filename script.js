@@ -50,10 +50,8 @@ function checkUser() {
                 body: JSON.stringify(payload)
             })
                 .then((resp) => {
-                console.log(resp)
                 })
                 .catch((error) => {
-                    console.log(error)
                 });
 
             window.location.href="game.html";

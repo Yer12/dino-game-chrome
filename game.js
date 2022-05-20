@@ -27,9 +27,10 @@ if(checkLose) {
   }
 }
 
+
+
+
 window.onblur = function (ev) {
-  console.log("gained focus", checkLose())
-  // checkLose(true)
   if(score > 0) {
     handleLose()
   }
@@ -143,7 +144,6 @@ function handleLose() {
       modalTitle.innerText = hardResults[Math.floor(Math.random() * hardResults.length)]
     }
     modal.classList.add('open');
-    console.log('modal is opened')
     document.getElementsByClassName('score-span')[0].innerText = Math.floor(score)
 
   }, 100)
@@ -156,7 +156,6 @@ function handleLose() {
 
   const exit = document.querySelector('.modal-exit');
   exit.addEventListener('click', function (event) {
-    console.log('clicked!')
     event.preventDefault();
     modal.classList.remove('open');
 
@@ -212,10 +211,8 @@ function handleLose() {
     body: JSON.stringify(payload)
   })
       .then((resp) => {
-        console.log(resp)
       })
       .catch((error) => {
-        console.log(error)
       });
 
 }

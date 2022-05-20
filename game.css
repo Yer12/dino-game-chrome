@@ -252,7 +252,7 @@ header .rule, header .rating {
 
 
 .plane {
-  width: 100%;
+  width: 50%;
   height: 92px;
   background-image: url("imgs/plane.svg");
   background-size: contain;

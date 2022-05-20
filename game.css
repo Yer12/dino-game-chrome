@@ -271,7 +271,7 @@ header .rule, header .rating {
   text-align: left;
   color: #fff;
   position: absolute;
-  --left: 0px;
+  --left: 800px;
   left: calc(var(--left) * 1%);
 
 }

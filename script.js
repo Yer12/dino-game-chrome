@@ -30,7 +30,7 @@ function checkUser() {
         alert("Fill form correctly !")
     }
     else {
-        if(phone.value.length === 16) {
+        if(phone.value.length === 16 && name.value.length !== 0) {
             localStorage.setItem('lrt_game_phone', formatPhone(phone.value))
             localStorage.setItem('lrt_game_nickname', name.value)
             localStorage.setItem('lrt_game_score', '0')

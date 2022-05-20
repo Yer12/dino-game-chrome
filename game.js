@@ -29,6 +29,7 @@ if(checkLose) {
 
 window.onfocus = function (ev) {
   console.log("gained focus", checkLose())
+  checkLose() = true
   handleLose()
 }
 
@@ -58,6 +59,7 @@ function update(time) {
 
 function checkLose() {
   const dinoRect = getDinoRect()
+  console.log(dinoRect)
     return getCactusRects().some(rect => isCollision(rect, dinoRect))
 }
 

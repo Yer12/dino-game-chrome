@@ -19,7 +19,7 @@ const planeTexts = [
 
 
 export function setupPlane() {
-    setCustomProperty(planeElems[0], "--left", 0)
+    setCustomProperty(planeElems[0], "--left", -700)
     // setCustomProperty(planeElems[1], "--left", 300)
 }
 

@@ -22,15 +22,15 @@ export function setupPlane() {
     setCustomProperty(planeElems[0], "--left", 0)
 
 }
-
+const plane = planeElems[0]
 const planeText = document.getElementById('plane-text');
 export function updatePlane(delta, speedScale) {
-    planeElems.forEach((plane, index) => {
+
         incrementCustomProperty(plane, "--left", delta * speedScale * SPEED * -1)
 
-        if (getCustomProperty(plane, "--left") <= -300) {
-            planeText.innerText = planeTexts[index]
-            incrementCustomProperty(plane, "--left", 600)
+        if (getCustomProperty(plane, "--left") <= -150) {
+            console.log(getCustomProperty(plane, "--left"))
+            incrementCustomProperty(plane, "--left", 300)
+            planeText.innerText = planeTexts[parseInt(getCustomProperty(plane, "--left")) / 150]
         }
-    })
 }

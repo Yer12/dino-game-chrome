@@ -281,10 +281,10 @@ header .rule, header .rating {
 
 @media screen and (max-width: 800px) {
   .plane {
-    width: 150px;
+    width: 362px;
     height: 50px;
     font-size: 17px;
-    padding-left: 110px;
+    padding-left: 183px;
   }
 }
 

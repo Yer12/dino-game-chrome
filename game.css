@@ -137,11 +137,11 @@ header .rule, header .rating {
 
 @media screen and (max-width: 800px) {
   .score {
-    bottom: 280px;
-    font-size: 20px;
+    bottom: 450px;
+    font-size: 30px;
   }
   .score b {
-    font-size: 20px;
+    font-size: 30px;
     margin-left: 5px;
   }
 }

@@ -27,7 +27,7 @@ const formatPhone = (phone) => {
 
 function checkUser() {
     if(name.value.length === 0 || phone.value.length === 0) {
-        alert("Fill form correctly !")
+        alert("Заполните форму правильно!")
     }
     else {
         if(phone.value.length === 16 && name.value.length !== 0) {
@@ -57,7 +57,7 @@ function checkUser() {
             window.location.href="game.html";
         }
         else {
-            alert("phone is not correct", phone.value.length)
+            alert("Не правильный номер", phone.value.length)
         }
     }
 }

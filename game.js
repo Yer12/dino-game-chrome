@@ -15,16 +15,16 @@ const startScreenElem = document.querySelector("[data-start-screen]")
 setPixelToWorldScale()
 window.addEventListener("resize", setPixelToWorldScale)
 if(checkLose) {
-  if(window.innerWidth > 978) {
+
     document.addEventListener("keydown", () => {
       handleStart()
     }, { once: true })
-  }
-  else {
+
+
     document.addEventListener("click", () => {
       handleStart()
     }, { once: true })
-  }
+
 }
 
 

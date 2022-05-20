@@ -29,7 +29,7 @@ if(checkLose) {
 
 window.onfocus = function (ev) {
   console.log("gained focus", checkLose())
-  checkLose() = true
+  checkLose(true)
   handleLose()
 }
 
@@ -57,10 +57,10 @@ function update(time) {
   window.requestAnimationFrame(update)
 }
 
-function checkLose() {
+function checkLose(forcedLose = false) {
   const dinoRect = getDinoRect()
   console.log(dinoRect)
-    return getCactusRects().some(rect => isCollision(rect, dinoRect))
+    return getCactusRects().some(rect => isCollision(rect, dinoRect)) || forcedLose;
 }
 
 function isCollision(rect1, rect2) {

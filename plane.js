@@ -19,20 +19,18 @@ const planeTexts = [
 
 
 export function setupPlane() {
-    setCustomProperty(planeElems[0], "--left", 200)
-    setCustomProperty(planeElems[1], "--left", 400)
-    setCustomProperty(planeElems[2], "--left", 600)
-    setCustomProperty(planeElems[3], "--left", 800)
-    setCustomProperty(planeElems[4], "--left", 1000)
-    setCustomProperty(planeElems[5], "--left", 1200)
+    setCustomProperty(planeElems[0], "--left", 0)
+
 }
 
+const planeText = document.getElementById('plane-text');
 export function updatePlane(delta, speedScale) {
     planeElems.forEach((plane, index) => {
         incrementCustomProperty(plane, "--left", delta * speedScale * SPEED * -1)
 
-        if (getCustomProperty(plane, "--left") <= -200 * (index+1)) {
-            incrementCustomProperty(plane, "--left", 200 * (index +1))
+        if (getCustomProperty(plane, "--left") <= -300) {
+            planeText.innerText = planeTexts[index]
+            incrementCustomProperty(plane, "--left", 600)
         }
     })
 }

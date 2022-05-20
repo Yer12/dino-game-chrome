@@ -210,9 +210,16 @@ header .rule, header .rating {
   height: 90px;
   position: absolute;
   top: 100px;
+  background-size: contain;
   right: 0;
   z-index: -3;
-  /*animation: animateCloud 10s linear infinite;*/
+  animation: animateCloud 10s linear infinite;
+}
+@media screen and (max-width: 800px) {
+  .cloud {
+    width: 74px;
+    height: 21px;
+  }
 }
 
 @keyframes animateCloud {

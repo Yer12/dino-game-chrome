@@ -252,15 +252,15 @@ header .rule, header .rating {
 
 
 .plane {
-  width: 800px;
-  height: 107px;
+  width: 663px;
+  height: 92px;
   background-image: url("imgs/plane.svg");
   background-size: contain;
   background-repeat: no-repeat;
 
   font-size: 30px;
   font-family: 'Superstar';
-  padding-right: 49px;
+  padding-right: 60px;
   text-align: right;
   color: #fff;
 

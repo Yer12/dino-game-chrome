@@ -19,7 +19,7 @@ const planeTexts = [
 
 
 export function setupPlane() {
-    setCustomProperty(planeElems[0], "--left", -50)
+    setCustomProperty(planeElems[0], "--left", -100)
 
 }
 const plane = planeElems[0]
@@ -28,9 +28,9 @@ export function updatePlane(delta, speedScale) {
 
         incrementCustomProperty(plane, "--left", delta * speedScale * SPEED * -1)
 
-        if (getCustomProperty(plane, "--left") <= -50) {
-            console.log(getCustomProperty(plane, "--left"))
-            incrementCustomProperty(plane, "--left", 100)
-            planeText.innerText = planeTexts[parseInt(getCustomProperty(plane, "--left")) / 150]
+        if (getCustomProperty(plane, "--left") <= -100) {
+            console.log(Math.floor(Math.random() * planeTexts.length))
+            incrementCustomProperty(plane, "--left", 200)
+            planeText.innerText = planeTexts[Math.floor(Math.random() * planeTexts.length)]
         }
 }

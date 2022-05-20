@@ -108,7 +108,7 @@ const lowResults = [
     'Сделаем вид, что мы этого не видели',
     'Спрячем твой позор за забором '
 ]
-const mediusResults = [
+const mediumResults = [
     'Не важно, какой прыжок. Главное — как ты им пользуешься ',
     'Результат не маленький, просто в Астане холодно',
     'Советуем подкачать руки. Начни с эспандера',
@@ -127,17 +127,24 @@ const hardResults = [
     'Ты с Байконура? Прыжки просто космос 🧑‍🚀',
     'Ты — наш краш и тигр! 🐯',
 ]
-
+const modalTitle = document.getElementById('modal-title');
 function handleLose() {
   setDinoLose()
   setTimeout(() => {
     startScreenElem.classList.remove("hide")
     // Modal
-
+    if(score < 250) {
+      modalTitle.innerText = lowResults[Math.floor(Math.random() * lowResults.length)]
+    }
+    else if(score < 500 && score >= 250) {
+      modalTitle.innerText = mediumResults[Math.floor(Math.random() * mediumResults.length)]
+    }
+    else {
+      modalTitle.innerText = hardResults[Math.floor(Math.random() * hardResults.length)]
+    }
     modal.classList.add('open');
     console.log('modal is opened')
     document.getElementsByClassName('score-span')[0].innerText = Math.floor(score)
-
 
   }, 100)
 

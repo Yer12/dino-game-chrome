@@ -24,7 +24,6 @@ export function setupPlane() {
 }
 
 export function updatePlane(delta, speedScale) {
-    console.log('delta:',delta, 'speedScale:',speedScale, 'speed:',SPEED)
     planeElems.forEach(plane => {
         incrementCustomProperty(plane, "--left", delta * speedScale * SPEED * -1)
 

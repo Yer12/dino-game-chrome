@@ -24,7 +24,6 @@ if(checkLose) {
     document.addEventListener("click", () => {
       handleStart()
     }, { once: true })
-
 }
 
 
